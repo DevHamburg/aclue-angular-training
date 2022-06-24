@@ -1,0 +1,205 @@
+{
+  "employee": [
+    {
+      "id": "4f54e2ba-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Alexander",
+      "lastName": "Falke",
+      "imageUrl": "./assets/images/alexander-falke.jpg",
+      "level": "Consultant",
+      "projectExperience": 7,
+      "skills": [
+        "PO",
+        "Scrum Master",
+        "Witzig",
+        "Jira",
+        "Papa"
+      ]
+    },
+    {
+      "id": "59155f14-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Mara",
+      "lastName": "Pape",
+      "imageUrl": "./assets/images/mara-pape.jpg",
+      "level": "Consultant",
+      "projectExperience": 3,
+      "skills": [
+        "React",
+        "Java",
+        "CSS",
+        "HTML",
+        "Volleyball"
+      ]
+    },
+    {
+      "id": "5ef77c46-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Vincent",
+      "lastName": "Martens",
+      "imageUrl": "./assets/images/vincent-martens.jpg",
+      "level": "Senior Consultant",
+      "projectExperience": 5,
+      "skills": [
+        "DevOps",
+        "AWS",
+        "Azure",
+        "Kubernetes",
+        "Docker"
+      ]
+    },
+    {
+      "id": "646ac7f0-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Jakob",
+      "lastName": "Müller",
+      "imageUrl": "./assets/images/jakob-müller.jpg",
+      "level": "Principal",
+      "projectExperience": 11,
+      "skills": [
+        "PO",
+        "Scrum Master",
+        "Nett",
+        "Jira",
+        "Reden"
+      ]
+    },
+    {
+      "id": "6b19cc54-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Manuel",
+      "lastName": "Ruhe",
+      "imageUrl": "./assets/images/manuel-ruhe.jpg",
+      "level": "Senior Consultant",
+      "projectExperience": 3,
+      "skills": [
+        "Javascript",
+        "Java",
+        ".NET",
+        "C#"
+      ]
+    },
+    {
+      "id": "6fe42446-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Marius",
+      "lastName": "Hensch",
+      "imageUrl": "./assets/images/marius-hensch.jpg",
+      "level": "CEO",
+      "projectExperience": 5,
+      "skills": [
+        "Smart",
+        "Reden",
+        "Lächeln",
+        "Vertrieb",
+        "Feiern"
+      ]
+    },
+    {
+      "id": "73de1318-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Melina",
+      "lastName": "Tiebusch",
+      "imageUrl": "./assets/images/melina-tiebusch.jpg",
+      "level": "Consultant",
+      "projectExperience": 11,
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Docker",
+        "Javascript"
+      ]
+    },
+    {
+      "id": "77e71fe0-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Sarah",
+      "lastName": "Dörr",
+      "imageUrl": "./assets/images/sarah-dörr.jpg",
+      "level": "Senior Consultant",
+      "projectExperience": 3,
+      "skills": [
+        "Java",
+        "JUnit",
+        "AWS",
+        "Angular",
+        "Spring"
+      ]
+    },
+    {
+      "id": "7bebc442-e6da-11ec-8fea-0242ac120002",
+      "firstName": "Steffanie",
+      "lastName": "Dahl",
+      "imageUrl": "./assets/images/steffanie-dahl.jpg",
+      "level": "Kümmerer:in",
+      "projectExperience": 5,
+      "skills": [
+        "Alles",
+        "Orga",
+        "Freundlich",
+        "Lustig",
+        "Fröhlich"
+      ]
+    },
+    {
+      "id": "f6a061a2-98a4-4571-81b7-f06f34b87d01",
+      "firstName": "Keno",
+      "lastName": "Hellmers",
+      "imageUrl": "./assets/images/keno-hellmers.jpg",
+      "level": "Consultant",
+      "projectExperience": 5,
+      "skills": [
+        "PO",
+        "Orga",
+        "Freundlich",
+        "Smalltalk",
+        "Fröhlich"
+      ]
+    },
+    {
+      "id": "9977ecb6-8563-4b3b-9900-b27e3e8c55b7",
+      "firstName": "Nicole",
+      "lastName": "Bruhn",
+      "imageUrl": "assets/images/nicole-bruhn.jpg",
+      "level": "CEO",
+      "projectExperience": "24",
+      "skills": [
+        "Alle",
+        "und noch mehr",
+        "ja",
+        "Infinity Performance"
+      ]
+    },
+    {
+      "id": "4a3e79c6-0555-47fe-b08a-ba96989383f3",
+      "firstName": "Marcel",
+      "lastName": "Prehn",
+      "imageUrl": "assets/images/marcel-prehn.jpg",
+      "level": "Principal",
+      "projectExperience": "208",
+      "skills": [
+        "einfach machen",
+        "driver",
+        "charmant",
+        "love",
+        "peace",
+        "people"
+      ]
+    },
+    {
+      "id": "ed374c57-0b88-44b0-be1c-18f1f56daaf3",
+      "firstName": "Dorian",
+      "lastName": "Offermann",
+      "imageUrl": "assets/images/dorian-offermann.jpg",
+      "level": "Expert",
+      "projectExperience": "24",
+      "skills": [
+        "Flutter",
+        "Anime",
+        "Lego",
+        "Golang"
+      ]
+    },
+    {
+      "id": "c5231549-f54b-48fe-9b8f-70172795d944",
+      "firstName": "",
+      "lastName": "asd",
+      "imageUrl": "assets/images/.jpg",
+      "level": "",
+      "projectExperience": "",
+      "skills": []
+    }
+  ]
+}

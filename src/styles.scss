@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$primary: #003862;
+$secondary: #eb8934;
+$white: #fefefe;
+$black: #0f0f0f;
+$gray: #949494;
+
+span,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+}
+
+p {
+    margin-bottom: 4px;
+}

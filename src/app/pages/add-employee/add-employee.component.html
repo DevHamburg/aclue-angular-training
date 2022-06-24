@@ -1,0 +1,95 @@
+<div class="container">
+  <form
+    (ngSubmit)="onAddEmployeeSubmit()"
+    [formGroup]="addEmployeeForm"
+    class="employee-form"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Firstname</mat-label>
+      <input matInput required formControlName="firstName" />
+      <mat-error *ngIf="firstName.errors?.['required']">
+        Please enter your first name.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Lastname</mat-label>
+      <input matInput required formControlName="lastName" />
+      <mat-error *ngIf="lastName.errors?.['required']">
+        Please enter your last name.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Image URL</mat-label>
+      <input matInput required formControlName="imageUrl" />
+      <mat-error *ngIf="imageUrl.errors?.['required']">
+        Please enter a valid image URL.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Level</mat-label>
+      <input matInput required formControlName="level" />
+      <mat-error *ngIf="level.errors?.['required']">
+        Please enter a level.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Project experience</mat-label>
+      <input matInput required formControlName="projectExperience" />
+      <mat-error *ngIf="projectExperience.errors?.['required']"
+        >Please enter your project experience in years.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="chip-list" appearance="outline">
+      <mat-label>Skills</mat-label>
+      <mat-chip-list #chipList aria-label="Skills selection">
+        <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
+          {{ skill }}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+        <input
+          placeholder="New fruit..."
+          [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur"
+          (matChipInputTokenEnd)="add($event)"
+        />
+      </mat-chip-list>
+    </mat-form-field>
+    <button mat-raised-button [disabled]="!addEmployeeForm.valid">
+      Add employee
+    </button>
+  </form>
+
+  <div></div>
+  <div>
+    <h1>Preview:</h1>
+    <div class="card-container">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ firstName.value }}</mat-card-title>
+          <mat-card-subtitle>{{ lastName.value }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <img
+            src="./assets/images/{{ imageUrl.value }}.jpg"
+            alt="employee-image"
+            onerror="this.src='./assets/images/image-placeholder.png';"
+          />
+          <p><b>Level: </b>{{ level.value }}</p>
+          <div class="experience-container">
+            <p><b>Project experience: </b>{{ projectExperience.value }}</p>
+            <p *ngIf="projectExperience.value !== ''">&nbsp;Years</p>
+          </div>
+          <p class="skills">Skills:</p>
+          <div class="chips-container">
+            <div *ngFor="let skill of skills">
+              <div class="chips">{{ skill }}</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

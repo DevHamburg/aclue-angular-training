@@ -1,4 +1,4 @@
-# AclueAngularTraining
+# Aclue Angular Basic Training
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## TASKS.module
+
+In the TASKS.md you can find your tasks.
+
+
+<b> Info: </b> When you start:
+
+1. Rename the folders or file to -solution.
+
+Example: 
+- employee-overview to <b> employee-overview-solution </b>
+- app-routing.module.ts to <b> app-routing.module-solution.ts </b> 
+
+<br> 
+
+2. Remove -task from folder and files if you have solved the task to check if your solution works.
+
+Example: 
+- employee-overview-task to <b> employee-overview </b>
+- app-routing.module-task.ts to <b> app-routing.module.ts </b> 

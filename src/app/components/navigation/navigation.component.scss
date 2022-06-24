@@ -1,0 +1,59 @@
+@import "../../../styles.scss";
+
+.img-link {
+    font: unset;
+}
+
+img {
+    width: 100px;
+    display: flex;
+    align-self: center;
+}
+
+mat-toolbar {
+    background-color: $white;
+    border-bottom: 1px solid $primary;
+    box-shadow: 0px 0px 8px 2px $primary;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+    margin: 0 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: $primary;
+    mat-icon {
+        padding: 4px;
+        margin-right: 8px;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    span {
+        display: none;
+    }
+    mat-toolbar {
+        display: flex;
+        justify-content: space-around;
+    }
+    mat-icon {
+        border-radius: 50%;
+        border: 2px solid $primary;
+    }
+    .active {
+        border-color: $secondary;
+    }
+}
+
+.active {
+    color: $secondary;
+    font-weight: 500;
+}

@@ -1,0 +1,50 @@
+<a mat-button routerLink="/employee-overview">
+  <mat-icon aria-label="Arrow Back Icon"
+    >arrow_back</mat-icon
+  ><span>Back to overview</span></a
+>
+
+<ng-container
+  *ngIf="employeeNotExist; then noEmployeeTemplate; else employeeTemplate"
+></ng-container>
+<ng-template #noEmployeeTemplate>
+  <div class="card-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Oops!</mat-card-title>
+        <mat-card-subtitle
+          >No employee was found!</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          src="../../../assets/images/image-placeholder.png"
+          onerror="this.src='./assets/images/image-placeholder.png';"
+          alt="placeholder-image"
+        />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-template>
+
+<ng-template #employeeTemplate>
+  <div *ngIf="employee" class="card-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ employee.firstName }}</mat-card-title>
+        <mat-card-subtitle>{{ employee.lastName }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img src="{{ employee.imageUrl }}" alt="employee-image"  onerror="this.src='./assets/images/image-placeholder.png';"/>
+        <p><b>Level: </b>{{ employee.level }}</p>
+        <p><b>Project experience: </b>{{ employee.projectExperience }} Years</p>
+        <p class="skills">Skills:</p>
+        <div class="chips-container">
+          <div *ngFor="let skill of employee.skills">
+            <div class="chips">{{ skill }}</div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-template>

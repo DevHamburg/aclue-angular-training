@@ -1,0 +1,54 @@
+h1 {
+    color: $primary;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+mat-card {
+    cursor: pointer;
+    min-width: 140px;
+    max-width: 240px;
+    background-color: $white;
+    margin: 16px 16px;
+    color: $black;
+}
+
+mat-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {
+    color: $primary;
+    text-align: center;
+}
+
+mat-card-subtitle {
+    color: $gray;
+    text-align: center;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    margin-bottom: 24px;
+    &:hover {
+        border: 2px solid $secondary;
+    }
+}

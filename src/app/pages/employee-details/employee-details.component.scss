@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+@import "../../styles/card.scss";
+@import "../../styles/skills.scss";
+
+mat-icon {
+    color: $primary;
+    margin-right: 4px;
+}
+
+span {
+    color: $primary;
+}

@@ -1,0 +1,21 @@
+<div class="card-container">
+  <!-- (09) loop trough the employees | let employee of employees -->
+  <div *ngFor="">
+    <!-- (09) add the function showEmployeeDetailsClickHandler(employee) inside the click event -->
+    <mat-card (click)="">
+      <mat-card-header>
+        <mat-card-title>{{ employee.firstName }}</mat-card-title>
+        <!-- (09) add lastName -->
+        <mat-card-subtitle> <!-- lastName --></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- (09) add imageUrl inside the img src="" -->
+        <img
+          src=""
+          onerror="this.src='./assets/images/image-placeholder.png';"
+          alt="employee-image"
+        />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
