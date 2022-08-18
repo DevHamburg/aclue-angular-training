@@ -1,6 +1,6 @@
 <div class="container">
-  <!-- (11) add [formGroup] and (ngSubmit) inside the `<form>` tag -->
-  <form class="employee-form">
+  (11) add [formGroup] and (ngSubmit) inside the `<form>` tag
+  <form [formGroup]="addEmployeeForm" (ngSubmit)="onAddEmployeeSubmit()" class="employee-form">
     <mat-form-field appearance="outline">
       <mat-label>Firstname</mat-label>
       <input matInput required formControlName="firstName" />

@@ -12,7 +12,7 @@ import * as uuid from 'uuid';
   styleUrls: ['./add-employee.component.scss'],
 })
 export class AddEmployeeComponent implements OnInit {
-  constructor(private employeeRestApiService: EmployeeRestApiService) {}
+  constructor(private employeeRestApiService: EmployeeRestApiService) { }
 
   addEmployeeForm!: FormGroup;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
@@ -22,13 +22,20 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit(): void {
     this.addEmployeeForm = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
-      /* (11) add lastName and imageUrl to FormControl */
+      lastName: new FormControl('', [Validators.required]),
+      imageUrl: new FormControl('', [Validators.required]),
       level: new FormControl('', [Validators.required]),
       projectExperience: new FormControl('', [Validators.required]),
     });
   }
 
-  /* (11) get lastName and imageUrl */
+  get firstName() {
+    return this.addEmployeeForm.get('firstName')!;
+  }
+
+  get lastName() {
+    return this.addEmployeeForm.get('lastName')!;
+  }
 
   get imageUrl() {
     return this.addEmployeeForm.get('imageUrl')!;
@@ -55,6 +62,29 @@ export class AddEmployeeComponent implements OnInit {
       this.skills.splice(index, 1);
     }
   }
+
+  onAddEmployeeSubmit() {
+    const employee: Employee = {
+      id: uuid.v4(),
+      firstName: this.firstName.value,
+      lastName: this.lastName.value,
+      imageUrl: `assets/images/${this.imageUrl.value}.jpg`,
+      level: this.level.value,
+      projectExperience: this.projectExperience.value,
+      skills: this.skills,
+    };
+
+    this.employeeRestApiService.addEmployee(employee).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: () => {
+        console.error('Fehler beim Hinzufügen des Mitarbeiters');
+      },
+    });
+  }
+
+
 
   /* (11) create a onAddEmployeeSubmit() method */
   /* (11) extend the employee Object */

@@ -86,7 +86,7 @@ ng g s services/employee-rest-api-service
 ```
 
 Explaination:
-<b> ng (g = generate) - (s = service) - (components = folder) - (add-employee = name) </b>
+<b> ng (g = generate) - (s = service) - (components = folder) - (employee-rest-api-service = name) </b>
 
 4. Create a <b>models</b> folder inside the app directory
 
@@ -107,7 +107,7 @@ npm i json-server
 - Angular material is a component library
 
 ```
-ng add@angular/material
+ng add @angular/material
 ```
 
 - UUID to create unique identifier
@@ -124,7 +124,7 @@ npm i @types/uuid
 
 <br>
 
-1. open file app-routing.module.ts
+1. open file app-routing.module-task.ts
 
 - inside: `const routes: Routes = []`
 - add the missing routes
@@ -252,7 +252,7 @@ Explaination: <br>
 What means the <b>!</b> attribute
 
 - non-null assertion
-- The exclamation mark (non-null assertion) operator removes null and undefined from the type of an expression. It is used when we we know that a variable that TypeScript thinks could be null or undefined actually isn't.
+- The exclamation mark (non-null assertion) operator removes null and undefined from the type of an expression. It is used when we know that a variable wich TypeScript thinks could be null or undefined actually isn't.
 
 What means the <b>?</b> attribute
 
@@ -274,7 +274,7 @@ import { HttpClientModule } from '@angular/common/http';
 HttpClientModule
 ```
 
-2. import Employee model in <b>employee-rest-api.service.ts</b>
+2. import Employee model in <b>employee-rest-api-task.service.ts</b>
 
 3. create a http get request to get all employees and name it <b> getAllEmployees() </b>
 
@@ -293,14 +293,14 @@ getAllExample(): Observable<Example[]> {
   }
 ```
 
-4. create a http get request to get a employee by id and name it <b> getEmployeeById() </b>
+4. create a http get request to get an employee by id and name it <b> getEmployeeById() </b>
 
 ```
 getbyIdExample(id: string)
 const url = `${this.baseUrl}example/${id}`;
 ```
 
-5. create a http post request to add a employee and name it <b> addEmployee()</b>
+5. create a http post request to add an employee and name it <b> addEmployee()</b>
 
 - you have to pass the employee as parameter addEmploye(employee: Type)
 - <b>this.http.post(url, data)</b>
@@ -321,7 +321,7 @@ addExample(example: Example): Observable<Exmaple> {
 Explanations: <br>
 <b>Observable</b>
 
-- A handler for receiving observable notifications implements the Observer interface. It is an object that defines callback methods to handle the three types of notifications that an observable can send:
+- A handler for receiving observable notifications implements the Observer interface. It is an object that defines callback methods to handle the three types of notifications wich an observable can send:
 
 <b> There are two types of pipe </b>
 

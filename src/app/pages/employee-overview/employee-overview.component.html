@@ -6,7 +6,11 @@
         <mat-card-subtitle>{{ employee.lastName }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <img src="{{ employee.imageUrl }}"  onerror="this.src='./assets/images/image-placeholder.png';" alt="employee-image" />
+        <img
+          src="{{ employee.imageUrl }}"
+          onerror="this.src='./assets/images/image-placeholder.png';"
+          alt="employee-image"
+        />
       </mat-card-content>
     </mat-card>
   </div>
